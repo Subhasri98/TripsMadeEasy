@@ -1,0 +1,92 @@
+﻿@{
+    ViewBag.Title = "Mumbai";
+
+}
+
+<h2>Chennai</h2>
+<body>
+    <h1>HOTELS IN CHENNAI</h1>
+    <table width="500" border="0" cellpadding="70">
+
+        <tr>
+
+            <td align="center" valign="center">
+                <img src="~/mum1.jpg" id="kar" />
+                
+                <br />
+                The Karl Residency <br />
+            </td>
+
+
+            <td align="center" valign="center">
+                <img src="~/mum2.jpg" id="ori" />
+               
+                <br />
+                Hotel Orient<br />
+
+            </td>
+
+            <td align="center" valign="center">
+                <img src="~/mum3.jpg" id="yel" />
+                
+                <br />
+                The Yellow Sapphire<br />
+
+            </td>
+
+        </tr>
+
+        <tr>
+            <td align="center" valign="center">
+                <img src="~/mum4.jpg" id="mum" />
+                
+                <br />
+                The Leela Mumbai<br />
+
+            </td>
+
+            <td align="center" valign="center">
+                <img src="~/mum5.jpg" id="fab" />
+               
+                <br />
+                FabHotel Embassy Park <br />
+
+            </td>
+
+            <td align="center" valign="center">
+
+                <img src="~/room.jpg" id="obe" />
+                <br />
+                The Oberoi Hotel
+            </td>
+
+
+        </tr>
+    </table>
+
+
+
+</body>
+
+
+<script>
+    document.getElementById('kar').onclick = function () {
+        window.location.href = '@Url.Action("Hotel", "Home")?' + "hotelnm=The Karl Residency";
+    }
+    document.getElementById('ore').onclick = function () {
+        window.location.href = '@Url.Action("Hotel", "Home")?' + "hotelnm=Hotel Orient";
+    }
+    document.getElementById('yel').onclick = function () {
+        window.location.href = '@Url.Action("Hotel", "Home")?' + "hotelnm=The Yellow Sapphire";
+    }
+    document.getElementById('mum').onclick = function () {
+        window.location.href = '@Url.Action("Hotel", "Home")?' + "hotelnm= The Leela Mumbai";
+    }
+    document.getElementById('fab').onclick = function () {
+        window.location.href = '@Url.Action("Hotel", "Home")?' + "hotelnm= FabHotel Embassy Park";
+    }
+    document.getElementById('obe').onclick = function () {
+        window.location.href = '@Url.Action("Hotel", "Home")?' + "hotelnm=The Oberoi Hotel";
+    }
+
+</script>

@@ -1,0 +1,96 @@
+﻿
+@{
+    ViewBag.Title = "Banglore";
+}
+
+<h2>Banglore</h2>
+<body>
+    <h1>HOTELS IN BANGLORE</h1>
+    <table width="500" border="0" cellpadding="70">
+
+        <tr>
+
+            <td align="center" valign="center">
+
+
+                <img src="~/bang1.jpg" id="swa"/>
+                <br />
+                Hotel Swagat <br />
+            </td>
+
+
+            <td align="center" valign="center">
+
+
+                <img src="~/bang2.jpg" id="blo" />
+                <br />
+                Bloomrooms<br />
+
+            </td>
+
+            <td align="center" valign="center">
+
+                <img src="~/bang6.jpg" id="tri" />
+                <br />
+                Trinity Suites<br />
+
+            </td>
+
+        </tr>
+
+        <tr>
+            <td align="center" valign="center">
+
+
+                <img src="~/hotel5.jpg" id="sig" />
+                <br />
+                The Signature Inn<br />
+
+            </td>
+
+            <td align="center" valign="center">
+                <img src="~/bang4.jpg"  id="mar"/>
+                
+                <br />
+                Mark Whitefield Hotel<br />
+
+            </td>
+
+            <td align="center" valign="center">
+                <img src="~/bang3.jpg" id="nov" />
+                
+                      <br />
+                The Novotel<br />
+            </td>
+
+
+        </tr>
+    </table>
+
+
+
+</body>
+
+<script>
+    document.getElementById('swa').onclick = function () {
+        window.location.href = '@Url.Action("Hotel", "Home")?' + "hotelnm=Hotel Swagat";
+    }
+    document.getElementById('blo').onclick = function () {
+        window.location.href = '@Url.Action("Hotel", "Home")?' + "hotelnm=Bloomrooms";
+    }
+    document.getElementById('tri').onclick = function () {
+        window.location.href = '@Url.Action("Hotel", "Home")?' + "hotelnm=Trinity Suites";
+    }
+    document.getElementById('sig').onclick = function () {
+        window.location.href = '@Url.Action("Hotel", "Home")?' + "hotelnm=The Signature Inn";
+    }
+    document.getElementById('mar').onclick = function () {
+        window.location.href = '@Url.Action("Hotel", "Home")?' + "hotelnm=Mark Whitefield Hotel";
+    }
+    document.getElementById('nov').onclick = function () {
+        window.location.href = '@Url.Action("Hotel", "Home")?' + "hotelnm=The Novotel";
+    }
+
+</script>
+
+

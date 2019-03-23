@@ -1,0 +1,32 @@
+﻿@model HotelReservationSystem.Models.HotelViewModel
+@{
+    ViewBag.Title = "Hotel";
+}
+
+<h2>@Model.hotelnm</h2>
+<img src="~/@Model.imagenm" id="Ulo" />
+<p>@Html.Raw(HttpUtility.HtmlDecode(Model.address))</p>
+<p>@Html.Raw(HttpUtility.HtmlDecode(Model.description))</p>
+<p>@Html.Raw(HttpUtility.HtmlDecode(Model.amenities))</p>
+<input type="submit" value="Book Now" class="btn btn-default" id="btnSubmit" />
+<br />
+ 
+
+<script>
+    var myBtn = document.getElementById('btnSubmit');
+    myBtn.addEventListener('click', function (e) {
+        e.preventDefault(); //This prevents the default action
+        @*alert('Hello'); //Show the alert
+        window.location.href = '@Url.Action("Email", "Home")/';*@
+        $.ajax(
+        {
+            url: '@Url.Action("Email", "Home")',
+            type: 'GET',
+            data: { hotelnm: "@Model.hotelnm" },
+            cache: false,
+            success: function (result) {
+                alert("Mail sent")
+            }
+        });
+    });
+</script>

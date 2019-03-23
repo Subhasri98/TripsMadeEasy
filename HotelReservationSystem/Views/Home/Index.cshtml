@@ -1,0 +1,39 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>TripsMadeEasy</h1>
+    <p class="lead"></p>
+
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>Chennai</h2>
+        <img src="~/Chennai_58.jpg" id="chn" href onclick="Chennaifn()"/>
+        
+    </div>
+    <div class="col-md-4">
+        <h2>Mumbai</h2>
+        <img src="~/Mumbai.jpg" id="mum" onclick="Mumbaifn()" />
+    </div>
+    <div class="col-md-4">
+        <h2>Bangalore</h2>
+        <img src="~/bangalore.jpg" id="bang" onclick="Bangfn()" />
+    </div>
+    
+</div>
+
+<script>
+
+    document.getElementById('chn').onclick = function () {
+        window.location.href = '@Url.Action("Chennai", "Home")/';
+    }
+    document.getElementById('mum').onclick = function () {
+        window.location.href = '@Url.Action("Mumbai", "Home")/';
+    }
+    document.getElementById('bang').onclick = function () {
+        window.location.href = '@Url.Action("Banglore", "Home")/';
+    }
+</script>

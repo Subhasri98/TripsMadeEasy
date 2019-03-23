@@ -1,0 +1,93 @@
+﻿
+@{
+    ViewBag.Title = "Chennai";
+    
+}
+
+<h2>Chennai</h2>
+<body>
+    <h1>HOTELS IN CHENNAI</h1>
+    <table width="500" border="0" cellpadding="70">
+
+        <tr>
+
+            <td align="center" valign="center">
+
+                <img src="~/hotel.jpg" id="Ulo"/> 
+                <br />
+                Ulo Panasia Residency <br />
+            </td>
+
+
+            <td align="center" valign="center">
+
+                <img src="~/hotel2 - Copy.jpg" id="emp"/>
+                <br />
+                Emporis<br />
+
+            </td>
+
+            <td align="center" valign="center">
+
+                <img src="~/hotel3.jpg" id="bac"/>
+                <br />
+                BackpackersInn<br />
+
+            </td>
+
+        </tr>
+
+        <tr>
+            <td align="center" valign="center">
+
+                <img src="~/hotel4.jpg" id="wes"/> 
+                <br />
+                The Westlin<br />
+
+            </td>
+
+            <td align="center" valign="center">
+
+                <img src="~/hotel5.jpg" id="fea"/>
+                <br />
+                Feathers <br />
+
+            </td>
+
+            <td align="center" valign="center">
+
+                <img src="~/room.jpg" id="lee"/>
+                <br />
+                Leela Palace
+            </td>
+
+
+        </tr>
+    </table>
+
+
+
+</body>
+
+
+<script>
+    document.getElementById('Ulo').onclick = function () {
+        window.location.href = '@Url.Action("Hotel", "Home")?' + "hotelnm=Ulo Panasia Residency";
+    }
+    document.getElementById('emp').onclick = function () {
+        window.location.href = '@Url.Action("Hotel", "Home")?' + "hotelnm=Emporis";
+    }
+    document.getElementById('bac').onclick = function () {
+        window.location.href = '@Url.Action("Hotel", "Home")?' + "hotelnm=BackpackersInn";
+    }
+    document.getElementById('wes').onclick = function () {
+        window.location.href = '@Url.Action("Hotel", "Home")?' + "hotelnm=The Westlin";
+    }
+    document.getElementById('fea').onclick = function () {
+        window.location.href = '@Url.Action("Hotel", "Home")?' + "hotelnm=Feathers";
+    }
+    document.getElementById('lee').onclick = function () {
+        window.location.href = '@Url.Action("Hotel", "Home")?' + "hotelnm=Leela Palace";
+    }
+
+</script>
